@@ -6,13 +6,13 @@
 
 <div align='justify'>
 
-**Contextualização:** Quando alguém pede um empréstimo ao banco, a instituição financeira precisa avaliar se esse empréstimo é um bom negócio ou não. Nessa avaliação, dois riscos estão em jogo: se a pessoa tem um histórico bom de crédito e é capaz de pagar o empréstimo, o banco perde a oportunidade de fazer negócio ao não aprovar o pedido. Mas se a pessoa tem um histórico ruim de crédito e não é confiável para pagar o empréstimo, o banco corre o risco de perder dinheiro ao aprovar o empréstimo.
+**Contextualização:** Quando alguém pede um crédito ao banco, a instituição financeira precisa avaliar se esse crédito é um bom negócio ou não. Nessa avaliação, dois riscos estão em jogo: se a pessoa tem um histórico bom de crédito e é capaz de pagar o empréstimo, o banco perde a oportunidade de fazer negócio ao não aprovar o pedido. Mas se a pessoa tem um histórico ruim de crédito e não é confiável para pagar o empréstimo, o banco corre o risco de perder dinheiro ao aprovar o crédito.
 
-Para reduzir os prejuízos, o banco precisa de uma regra que oriente quem deve receber a aprovação do empréstimo e quem não deve. Nesse processo, os gestores de empréstimos levam em consideração diversos fatores, como informações demográficas e socioeconômicas do solicitante, antes de tomar uma decisão sobre o pedido de empréstimo.
+Para reduzir os prejuízos, o banco precisa de uma regra que oriente quem deve receber a aprovação do crédito e quem não deve. Nesse processo, os gestores de empréstimos levam em consideração diversos fatores, como informações demográficas e socioeconômicas do solicitante, antes de tomar uma decisão sobre o pedido de crédito.
 
-**Objetivo da Análise:** Treinar um modelo de Machine Learning usando o algoritmo Naive Bayes para prever se novos solicitantes de empréstimo serão bons ou maus pagadores.
+**Objetivo da Análise:** Treinar um modelo de Machine Learning usando o algoritmo Naive Bayes para prever se novos solicitantes de crédito serão bons ou maus pagadores.
 
-**Conjunto de dados:** Os dados são sobre 1000 clientes de um banco alemão que fizeram solicitação de empréstimo e tem uma classe que diz se eles foram bons ou maus pagadores. 
+**Conjunto de dados:** Os dados são sobre 1000 clientes de um banco alemão que fizeram solicitação de crédito e tem uma classe que diz se eles foram bons ou maus pagadores. 
 
 ### Sobre o Naive Bayes
 
@@ -28,45 +28,26 @@ O Naive Bayes é frequentemente utilizado em problemas de classificação com m�
 
 As variáveis do conjunto de dados são:
 
-checking_status: o status da conta corrente do requerente, que pode ser "0 <= x < 200 DM", ">= 200 DM", "sem conta corrente" ou "outros".
-
-duration: duração do crédito em meses.
-
-credit_history: histórico de crédito do requerente, que pode ser "crédito existente quitado pontualmente", "crédito existente quitado pontualmente neste banco", "todos os créditos quitados pontualmente", "crédito existente não quitado pontualmente", "nenhum crédito existente".
-
-purpose: propósito do crédito, como "carro novo", "carro usado", "móveis/equipamentos", "rádio/TV", "eletrodomésticos", "reparos", "educação", "férias", "treinamento/projeto".
-
-credit_amount: montante do crédito solicitado em DM (marcos alemães).
-
-savings_status: status da poupança do requerente, que pode ser "<100 DM", "100 <= x < 500 DM", "500 <= x < 1000 DM", ">= 1000 DM", "desconhecido/nenhum".
-
-employment: status de emprego/atual emprego do requerente, que pode ser "desempregado", "<1 ano", "1 <= x < 4 anos", "4 <= x < 7 anos" ou ">= 7 anos".
-
-installment_commitment: quantidade de renda disponível após o pagamento de outras prestações, em porcentagem.
-
-personal_status: status pessoal e sexo do requerente, que pode ser "masculino solteiro", "masculino casado/divorciado", "feminino solteira" ou "outros".
-
-other_parties: outros devedores/garantidores presentes no contrato de crédito, que podem ser "nenhum", "co-requerente" ou "garantidores".
-
-residence_since: tempo de residência atual do requerente em anos.
-
-property_magnitude: tamanho da propriedade do requerente, que pode ser "nenhum", "carro", "seguro de vida/planos de poupança", "imóvel".
-
-age: idade do requerente em anos.
-
-other_payment_plans: outros planos de pagamento existentes, que podem ser "nenhum", "bens de consumo", "banco".
-
-housing: status de moradia do requerente, que pode ser "próprio", "alugado", "de graça".
-
-existing_credits: quantidade de créditos já existentes em bancos.
-
-job: status profissional do requerente, que pode ser "desempregado/não-existente", "<1 ano", "1 <= x < 4 anos", "4 <= x < 7 anos", ">= 7 anos".
-
-num_dependents: número de pessoas dependentes financeiramente do requerente.
-
-own_telephone: indica se o requerente possui telefone próprio ou não.
-
-foreign_worker: indica se o requerente é ou não um trabalhador estrangeiro.
+  - checking_status: o status da conta corrente do requerente;
+  - duration: indica o número de meses em que o crédito está sendo solicitado;
+  - credit_history: histórico de crédito do requerente;
+  - purpose: propósito do crédito;
+  - credit_amount: montante do crédito solicitado em DM (marcos alemães).
+  - savings_status: status da poupança do requerente;
+  - employment: status de emprego/atual emprego do requerente;
+  - installment_commitment: quantidade de renda disponível após o pagamento de outras prestações, em porcentagem.
+  - personal_status: status pessoal e sexo do requerente;
+  - other_parties: outros devedores/garantidores presentes no contrato de crédito;
+  - residence_since: tempo de residência atual do requerente em anos;
+  - property_magnitude: tamanho da propriedade do requerente;
+  - age: idade do requerente em anos;
+  - other_payment_plans: outros planos de pagamento existentes;
+  - housing: status de moradia do requerente;
+  - existing_credits: quantidade de créditos já existentes em bancos;
+  - job: status profissional do requerente;
+  - num_dependents: número de pessoas dependentes financeiramente do requerente.
+  - own_telephone: indica se o requerente possui telefone próprio ou não.
+  - foreign_worker: indica se o requerente é ou não um trabalhador estrangeiro.
 
 ### Etapas para resolução do problema:
 
