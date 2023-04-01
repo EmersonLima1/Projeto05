@@ -60,3 +60,28 @@ As variáveis do conjunto de dados são:
 **4 - Avaliação do modelo:** Depois de testar o modelo, o desempenho é avaliado para garantir que ele esteja funcionando bem. Isso pode ser feito ajustando os parâmetros do modelo, como o limiar de classificação, ou usando técnicas de validação cruzada para avaliar o desempenho do modelo em diferentes conjuntos de dados.
 
 **5- Previsão de novos dados:** Após o modelo ser considerado adequado, ele pode ser usado para avaliar a probabilidade de um novo cliente ser um bom ou mau pagador com base em suas características.
+
+### Considerações sobre o modelo treinado
+
+
+<div align='center'>
+
+![Acurácia e Validação Cruzada](https://github.com/EmersonLima1/Projeto05/blob/main/Acur%C3%A1cia%20do%20Modelo%20-%20Valida%C3%A7%C3%A3o%20Cruzada%20-%20Naive%20Bayes%20-%20German%20Credit.png)
+
+<div align='justify'>
+
+O modelo treinado obteve uma acurácia de 71%, o que significa que o modelo foi capaz de classificar corretamente 71% das instâncias do conjunto de dados de teste. O resultado da validação cruzada indica que o modelo de Naive Bayes Gaussiano teve uma acurácia média de 0.70 com um desvio padrão de 0.06. Isso significa que o modelo foi capaz de classificar corretamente cerca de 70% das instâncias do conjunto de dados durante a validação cruzada. A acurácia média da validação cruzada (0.70 +/- 0.06) e a acurácia do modelo (71%) estão bastante próximas. Isso indica que o modelo tem uma boa capacidade de generalização, ou seja, é capaz de fazer previsões precisas em novos conjuntos de dados.
+
+<div align='center'>
+
+![Matriz de confusão](https://github.com/EmersonLima1/Projeto05/blob/main/Matriz%20de%20Confus%C3%A3o%20-%20Naive%20Bayes%20-%20German%20Credit.png)
+
+
+<div align='justify'>
+
+Com base na matriz de confusão obtida, pode-se interpretar os resultados da seguinte maneira:
+
+  - Verdadeiro positivo (VP): 172. Isso significa que 172 instâncias foram corretamente classificadas como pertencentes à classe "good" pelo modelo.
+  - Falso positivo (FP): 45. Isso significa que 45 instâncias foram incorretamente classificadas como pertencentes à classe "good" pelo modelo, mas na verdade pertenciam à classe "bad".
+  - Falso negativo (FN): 42. Isso significa que 42 instâncias foram incorretamente classificadas como pertencentes à classe "bad" pelo modelo, mas na verdade pertenciam à classe "good".
+  - Verdadeiro negativo (VN): 41. Isso significa que 41 instâncias foram corretamente classificadas como pertencentes à classe "bad" pelo modelo.
